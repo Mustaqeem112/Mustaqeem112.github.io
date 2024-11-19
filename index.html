@@ -7,12 +7,13 @@
     <title>Mustaqeem Khan</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* General Styles */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
-            background-color: black;
+            background-color: #f4f4f9;
             line-height: 1.6;
         }
         header {
@@ -30,22 +31,6 @@
             margin: 0;
             font-size: 1.2rem;
             opacity: 0.9;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #333;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        nav a {
-            color: white;
-            padding: 1rem 1.5rem;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s ease;
-        }
-        nav a:hover {
-            background: #4CAF50;
         }
         section {
             max-width: 1100px;
@@ -96,6 +81,77 @@
         .social-icons a:hover {
             color: #4CAF50;
         }
+
+        /* Responsive Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #333;
+            color: white;
+            padding: 0.5rem 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav .nav-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+        nav .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        nav .nav-links a:hover {
+            background: #4CAF50;
+            border-radius: 5px;
+            padding: 0.5rem;
+        }
+        nav .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            nav .nav-links {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                background: #333;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                padding: 1rem 0;
+                z-index: 999;
+            }
+            nav .nav-links.show {
+                display: flex;
+            }
+            nav .menu-toggle {
+                display: block;
+            }
+        }
+        /* Responsive Section Styles */
+        @media (max-width: 768px) {
+            .about img {
+                width: 200px;
+            }
+            section {
+                padding: 1rem;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -104,11 +160,15 @@
         <p>Research Scientist | Deep Learning Specialist</p>
     </header>
     <nav>
-        <a href="#about">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="#publications">Publications</a>
-        <a href="#contact">Contact</a>
-        <a href="cv.pdf" download="Mustaqeem_Khan_CV.pdf">CV</a>
+        <span class="nav-logo">MK</span>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="nav-links">
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#publications">Publications</a>
+            <a href="#contact">Contact</a>
+            <a href="cv.pdf" download="Mustaqeem_Khan_CV.pdf">CV</a>
+        </div>
     </nav>
     <section id="about" class="about">
         <h2>About Me</h2>
@@ -151,5 +211,11 @@
     <footer>
         <p>&copy; 2024 Mustaqeem Khan. All Rights Reserved.</p>
     </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
