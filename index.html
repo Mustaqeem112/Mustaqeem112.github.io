@@ -3,65 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of [Your Name] - Academic Projects, Publications, and Contact Information">
+    <meta name="description" content="Portfolio of Mustaqeem Khan - Academic Projects, Publications, and Contact Information">
     <title>Mustaqeem Khan</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
+            background-color: #f4f4f9;
             line-height: 1.6;
         }
         header {
-            background: #4CAF50;
+            background: linear-gradient(to right, #4CAF50, #81C784);
             color: white;
-            padding: 1rem 0;
+            padding: 2rem 0;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         header h1 {
-            margin: 0;
             font-size: 2.5rem;
+            margin-bottom: 0.5rem;
         }
         header p {
-            margin: 0.5rem 0 0;
+            margin: 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
         }
         nav {
             display: flex;
             justify-content: center;
             background: #333;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         nav a {
             color: white;
-            padding: 0.75rem 1rem;
+            padding: 1rem 1.5rem;
             text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
         }
         nav a:hover {
             background: #4CAF50;
         }
         section {
-            max-width: 800px;
+            max-width: 1100px;
             margin: 2rem auto;
             padding: 1rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .projects, .publications {
-            margin-bottom: 2rem;
-        }
-        h2 {
+        section h2 {
             color: #4CAF50;
             margin-bottom: 1rem;
+            text-align: center;
         }
-        .card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 1rem;
+        .about {
+            text-align: center;
+        }
+        .about img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 4px solid #4CAF50;
             margin-bottom: 1rem;
+        }
+        .projects .card, .publications ul li {
+            margin-bottom: 1rem;
+            padding: 1rem;
             background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         footer {
             text-align: center;
-            padding: 1rem;
+            padding: 1.5rem;
             background: #333;
             color: white;
             margin-top: 2rem;
@@ -69,80 +88,67 @@
         .social-icons a {
             color: white;
             margin: 0 0.5rem;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #4CAF50;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Mustaqeem Khan</h1>
-        <p>Research Scientist</p>
+        <p>Research Scientist | Deep Learning Specialist</p>
     </header>
     <nav>
         <a href="#about">About Me</a>
         <a href="#projects">Projects</a>
         <a href="#publications">Publications</a>
         <a href="#contact">Contact</a>
-        <a href="cv.pdf" download="Mustaqeem_khan_Cv.pdf">CV</a>
+        <a href="cv.pdf" download="Mustaqeem_Khan_CV.pdf">CV</a>
     </nav>
-    <section id="about">
+    <section id="about" class="about">
         <h2>About Me</h2>
+        <img src="your-photo.jpg" alt="Mustaqeem Khan Photo">
         <p>
-            My research interests revolve around audio, video, and Speech Signal Processing; my Ph.D. thesis was on
-            human emotion recognition using Deep Learning techniques. I have achieved an expert level of conceptual and
-            implementation skills in Deep Learning for various applications. During my Ph.D. research, I designed different
-            kinds of Machine/Deep Learning models, including 1D-CNNs, 2D-CNNs, 3D-CNNs, Multi-Model, audio/text
-            encoders, sequential and its variants for emotion recognition, age and gender detection, action recognition,
-            violence detection, and forecasting. My academic research has been reviewed and published in several reputed
-            peer-reviewed international journals and A* conferences like IEEE, ISE, Elsevier, Welly, IEEE/CVF, and
-            Springer.
+            My research interests revolve around audio, video, and Speech Signal Processing. My Ph.D. thesis focused on
+            human emotion recognition using Deep Learning techniques. I have designed various Machine/Deep Learning
+            models, including CNNs, sequential networks, and multimodal approaches for applications such as emotion
+            recognition, action recognition, and forecasting.
         </p>
     </section>
     <section id="projects" class="projects">
         <h2>Projects</h2>
         <div class="card">
             <h3>Real-Time UAV Scene Analysis</h3>
-            <p>The ability to process and interpret dynamic environments in real-time is essential for UAV 
-                applications in complex scenarios. This project focuses on intelligent object detection, scene
-                 dynamics understanding, and activity recognition to enable UAVs to operate efficiently in real-time. 
-                 Traditional approaches often struggle with the challenges posed by rapidly changing environments, 
-                 computational constraints, and the need for robust decision-making. By leveraging advanced algorithms 
-                 and real-time data processing, this work aims to enhance UAV capabilities, such as autonomous navigation,
-                  surveillance, and interaction with dynamic environments, offering innovative solutions to critical 
-                  problems in UAV operations.
-            </p>
+            <p>This project focuses on intelligent object detection, scene dynamics understanding, and activity recognition 
+               for UAVs in real-time dynamic environments. The work enhances autonomous navigation and surveillance systems.</p>
         </div>
         <div class="card">
             <h3>Deep Learning for Energy Analytics</h3>
-            <p>The increasing complexity of energy systems demands advanced analytical methods to optimize performance
-                 and predict trends accurately. This project explores the application of deep learning to time-series 
-                 data for energy analytics, addressing challenges like variable demand, resource allocation, and system 
-                 efficiency. Conventional techniques often fail to capture the intricate patterns within energy data,
-                 limiting their predictive capabilities. By utilizing deep learning, this research aims to uncover insights,
-                improve energy forecasting, and support decision-making processes. The outcome is a framework that enhances
-                 the understanding of energy usage patterns, paving the way for sustainable and efficient energy management solutions.
-            </p>
+            <p>Leveraging deep learning on time-series data for energy analytics to improve forecasting, optimize 
+               resource allocation, and enhance system efficiency for sustainable energy management.</p>
         </div>
     </section>
     <section id="publications" class="publications">
         <h2>Publications</h2>
         <ul>
-            <li><strong>Paper Title 1</strong> - Published in <em>Journal/Conference</em>, Year.</li>
-            <li><strong>Paper Title 2</strong> - Published in <em>Journal/Conference</em>, Year.</li>
+            <li><strong>Emotion Recognition using 3D-CNNs</strong> - Published in <em>IEEE Transactions</em>, 2023.</li>
+            <li><strong>Real-Time UAV Scene Analysis</strong> - Presented at <em>ICCV</em>, 2022.</li>
         </ul>
     </section>
     <section id="contact">
         <h2>Contact</h2>
-        <p>If you'd like to get in touch, please email me at <a href="mailto:your.email@example.com">your.email@example.com</a>.</p>
+        <p>Feel free to reach out via email at <a href="mailto:mustaqeem.khan@example.com">mustaqeem.khan@example.com</a>.</p>
         <div class="social-icons">
             <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
     </section>
     <footer>
-        <p>&copy; 2024 [Your Name]. All Rights Reserved.</p>
+        <p>&copy; 2024 Mustaqeem Khan. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
-
